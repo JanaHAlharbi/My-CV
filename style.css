@@ -1,0 +1,349 @@
+/* Base Variables & Light Theme */
+:root {
+    --bg-page: #f4f6f9;
+    --bg-card: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-color: #e5e7eb;
+    --tag-bg: #eff6ff;
+    --tag-text: #1e40af;
+}
+
+/* Task 1: Dark Mode Variables */
+body.dark-mode {
+    --bg-page: #111827;
+    --bg-card: #1f2937;
+    --text-main: #f9fafb;
+    --text-muted: #9ca3af;
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --border-color: #374151;
+    --tag-bg: #1e3a8a;
+    --tag-text: #dbeafe;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 20px;
+}
+
+/* Top Controls */
+.top-controls {
+    max-width: 900px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.control-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+    border-color: var(--accent);
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Main CV Container */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+.cv-header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.cv-header h1 {
+    font-size: 2.3rem;
+    letter-spacing: -0.5px;
+}
+
+.role-title {
+    font-size: 1.15rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+/* Sections */
+.cv-section {
+    margin-bottom: 28px;
+}
+
+.cv-section h2 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Task 2: Show More Button */
+#more-about-content {
+    margin-top: 10px;
+}
+
+.text-toggle-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 0;
+    text-decoration: underline;
+}
+
+/* Experience & Education */
+.exp-item,
+.edu-item {
+    margin-bottom: 16px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.item-header h3 {
+    font-size: 1.08rem;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.institution {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.details {
+    font-size: 0.93rem;
+    margin-top: 4px;
+}
+
+.bullet-list {
+    padding-left: 20px;
+    font-size: 0.95rem;
+}
+
+.bullet-list li {
+    margin-bottom: 6px;
+}
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+/* Task 3 & 4: Projects & Filters */
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-header-flex h2 {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 5px 14px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-main);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 18px;
+    background-color: var(--bg-page);
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+}
+
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.05rem;
+}
+
+.category-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tech-tag {
+    font-size: 0.78rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    font-weight: 600;
+}
+
+/* Task 5: Print / Save as PDF Styles */
+@media print {
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        padding: 0;
+    }
+
+    .top-controls,
+    .filter-buttons,
+    .text-toggle-btn {
+        display: none !important;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+        background-color: #ffffff !important;
+    }
+
+    #more-about-content {
+        display: block !important;
+    }
+
+    .project-card {
+        background-color: #ffffff !important;
+        border: 1px solid #cccccc !important;
+        break-inside: avoid;
+    }
+
+    .cv-section {
+        break-inside: avoid;
+    }
+    .contact-info a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+@media print {
+    .contact-info a {
+        color: #000000 !important;
+        text-decoration: none;
+    }
+}
+}

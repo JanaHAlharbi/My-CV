@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana Alharbi | AI & Backend Engineer CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Control Bar (Hidden when printing) -->
+    <nav class="top-controls">
+        <button id="theme-toggle-btn" class="control-btn">Dark Mode</button>
+        <button id="print-btn" class="control-btn primary-btn">Print / Save as PDF</button>
+    </nav>
+
+    <div class="cv-container">
+        <!-- Header Section -->
+        <header class="cv-header">
+            <h1>Jana Alharbi</h1>
+            <p class="role-title">AI Engineer & Backend Developer</p>
+            <div class="contact-info">
+                <span>Jeddah, Saudi Arabia</span> •
+                <a href="mailto:Jalharbi4634@gmail.com">Jalharbi4634@gmail.com</a> •
+                <a href="https://github.com/JanaHAlharbi" target="_blank" rel="noopener noreferrer">GitHub</a> •
+                <a href="https://www.linkedin.com/in/jana-alharbi-202066207/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- Task 2: About Me Section with Show More / Show Less -->
+        <section id="about" class="cv-section">
+            <h2>About Me</h2>
+            <p>
+                Information Technology graduate from King Abdulaziz University with practical cooperative training (Co-op) experience in backend development and a strong focus on applied Artificial Intelligence.
+            </p>
+            <div id="more-about-content">
+                <p>
+                    During my backend training and technical projects, I built and integrated server-side logic, relational databases, and RESTful APIs while applying AI and data-driven workflows such as OCR receipt auditing, NLP/text classification, and data analysis. I enjoy turning complex requirements into clean, reliable, and scalable systems.
+                </p>
+            </div>
+            <button id="about-toggle-btn" class="text-toggle-btn">Show More</button>
+        </section>
+
+        <!-- Experience Section (Co-op Backend Experience) -->
+        <section id="experience" class="cv-section">
+            <h2>Experience</h2>
+            <div class="exp-item">
+                <div class="item-header">
+                    <h3>Backend Development Intern (Cooperative Training)</h3>
+                    <span class="date">Co-op Experience</span>
+                </div>
+                <p class="institution">Backend Engineering & Application Development</p>
+                <ul class="bullet-list">
+                    <li>Developed and maintained backend features, business logic, and database queries for web applications.</li>
+                    <li>Built and tested RESTful endpoints, handled validation and authentication flows, and collaborated on debugging and performance improvements.</li>
+                    <li>Worked with Git version control and structured workflows to deliver reliable features on schedule.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="cv-section">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <div class="item-header">
+                    <h3>Bachelor of Science in Information Technology</h3>
+                    <span class="date">Graduated</span>
+                </div>
+                <p class="institution">King Abdulaziz University (KAU), Faculty of Computing and Information Technology</p>
+                <p class="details">Relevant Coursework: Artificial Intelligence, Data Mining, Database Administration, Web Development, Software Engineering (UML), and Computer Networks.</p>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="cv-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <strong>Backend & Web Development:</strong> PHP, Laravel, JavaScript (ES6+), RESTful APIs, HTML5, CSS3
+                </div>
+                <div class="skill-group">
+                    <strong>AI & Data:</strong> Python, Machine Learning Fundamentals, NLP, OCR, Pandas, NumPy, Data Mining
+                </div>
+                <div class="skill-group">
+                    <strong>Databases & Tools:</strong> MySQL, Git & GitHub, n8n Workflow Automation, Lucidchart (UML), Linux
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 3 & 4: Dynamic Projects & Category Filtering -->
+        <section id="projects" class="cv-section">
+            <div class="section-header-flex">
+                <h2>Projects</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Web">Web</button>
+                    <button class="filter-btn" data-filter="Programming">Programming</button>
+                </div>
+            </div>
+            <!-- Project cards will be dynamically generated here by script.js -->
+            <div id="projects-container" class="projects-grid"></div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="cv-section">
+            <h2>Certifications & Training</h2>
+            <ul class="bullet-list">
+                <li><strong>Artificial Intelligence Specialization</strong> — KAUST Academy / Coursera</li>
+                <li><strong>Machine Learning & Linear Algebra Foundations</strong> — Coursera</li>
+                <li><strong>Cloud AI Live & Labs Workshop</strong> — Google Cloud</li>
+                <li><strong>Claude 101 & AI Agent Workflows</strong> — Anthropic</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
